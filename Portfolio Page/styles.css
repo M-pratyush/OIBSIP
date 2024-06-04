@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+/* Navigation */
+.navlist {
+    display: flex;
+    gap: 3.5rem;
+    height: 13vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #fff;
+    z-index: 1000;
+    margin: 0;
+}
+
+.navlist li {
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #020202;
+    position: relative;
+}
+
+.navlist li a::after {
+    position: absolute;
+    background: #ffa114;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform .8s;
+}
+
+.navlist li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Left and Right Containers */
+.left-container, .right-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.left-container {
+    background: #d6caeb;
+    width: 70%;
+    padding-left: 3rem;
+}
+.icon a{
+    text-decoration: none;
+    color: black;
+}
+
+.right-container {
+    background: linear-gradient(-45deg, #3D50A0, #d6caeb 70%);
+    width: 30%;
+}
+
+/* Icons */
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.icon .fa-brands {
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: background-clip 0.3s, text-fill-color 0.3s;
+}
+
+.icon .fa-facebook:hover {
+    background: linear-gradient(rgb(144, 30, 197), blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon .fa-linkedin:hover {
+    background: linear-gradient(rgb(107, 123, 219), blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon .fa-github:hover {
+    background: linear-gradient(rgba(223, 90, 50, 0.856), rgb(238, 241, 11));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icon .fa-square-instagram:hover {
+    background: linear-gradient(red, crimson);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Content */
+.content {
+    margin-left: 4rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.content .intro span {
+    color: #ffa114;
+}
+
+.content h1 {
+    font-size: 2.8rem;
+    color: #ffa114;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #000;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+
+/* Button Container */
+.btn-container button {
+    border: .1rem solid #7091E6;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s;
+}
+
+.btn-1 {
+    background: #7091E6;
+    color: #d6caeb;
+}
+
+.btn-2 {
+    background: transparent;
+    color: #7091E6;
+    margin-left: 2rem;
+}
+.btn-container a{
+    text-decoration: none;
+}
+
+.btn-1:hover {
+    background: transparent;
+    color: #7091E6;
+}
+
+.btn-2:hover {
+    background: #7091E6;
+    color: black;   
+}
+
+/* Design Elements */
+.design .circle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, #d6caeb 50%);
+    width: 28rem;
+}
+
+.circle:nth-child(2) {
+    background-image: url(./images/photo1.webp);
+    width: 20rem;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    border: .3rem solid white;
+    box-shadow: 0 0 1rem #fff, inset 0 0 1rem #fff, 0 0 2rem #3D50A0, inset 0 0 2rem #3D50A0, 0 0 3rem #3D50A0, inset 0 0 3rem #3D50A0;
+}
+
+/* About Section */
+.ftco-about {
+    padding: 80px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.heading-section h1.big {
+    font-size: 100px;
+    font-weight: 900;
+    color: #e0e0e0;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.heading-section h2.mb-4 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.heading-section h2.mb-4::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 32px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img-about {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.img-about:hover .overlay {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about-info p {
+    margin: 0 0 10px;
+    color: #f8f9fa;
+    font-size: 14px;
+}
+
+.title-s {
+    font-weight: 700;
+    color: #007bff;
+}
+
+.skill-mf {
+    margin-top: 30px;
+}
+.skill-mf span{
+    color: aquamarine;
+}
+
+.skill-mf .progress {
+    height: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background:#d6caeb;
+}
+
+.skill-mf .progress-bar {
+    background: #ffa114;
+    border-radius: 10px;
+    transition: width 0.6s;
+}
+
+.about-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-info ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-info ul li span:first-child {
+    font-weight: 700;
+}
+
+.counter-wrap {
+    background: #007bff;
+    color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.counter-wrap:hover {
+    background: #0056b3;
+    transform: translateY(-5px);
+}
+
+.counter-wrap .number {
+    font-size: 40px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.counter-wrap .btn {
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading-section h1.big {
+        font-size: 60px;
+    }
+
+    .heading-section h2.mb-4 {
+        font-size: 28px;
+    }
+
+    .about-info ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading-section h1.big {
+        font-size: 40px;
+    }
+
+    .heading-section h2.mb-4 {
+        font-size: 24px;
+    }
+
+    .about-info ul li {
+        align-items: flex-start;
+    }
+
+    .about-info ul li span:first-child {
+        width: 100%;
+    }
+}
+
+
+/* Resume Sections*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.resume-section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #007bff;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.experience-item, .education-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover, .education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.company, .institution {
+    font-size: 1rem;
+    color: #555;
+}
+
+ul {
+    margin-top: 10px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.download-cv {
+    margin-top: 40px;
+}
+
+.btn-primary {
+    background: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    ul li {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* contact Sections */
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0; /* Adjusted padding */
+    background-color: #f8f9fa; /* Background color */
+}
+
+.contact-section .heading-section h1 {
+    font-size: 42px; /* Heading font size */
+    color: #333; /* Heading color */
+}
+
+.contact-section .heading-section h2 {
+    font-size: 20px; /* Subheading font size */
+    color: #555; /* Subheading color */
+}
+
+.contact-section p {
+    font-size: 16px; /* Paragraph font size */
+    color: #777; /* Paragraph color */
+}
+
+.contact-info {
+    justify-content: center;
+}
+
+.contact-info .box {
+    background-color: #fff; /* Box background color */
+    border-radius: 8px; /* Box border radius */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Box shadow */
+    transition: transform 0.3s ease; /* Box transition */
+    margin: 0 10px; /* Margin between boxes */
+    padding: 20px; /* Box padding */
+}
+
+.contact-info .box:hover {
+    transform: translateY(-8px); /* Hover effect */
+}
+
+.contact-info .box h3 {
+    font-size: 20px; /* Title font size */
+    color: #333; /* Title color */
+    margin-bottom: 10px; /* Bottom margin */
+}
+
+.contact-info .box p {
+    font-size: 16px; /* Content font size */
+    color: #555; /* Content color */
+}
+
+.contact-info .box .icon {
+    font-size: 30px; /* Icon size */
+    color: #007bff; /* Icon color */
+}
+
+.contact-info .box .icon span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px; /* Right margin */
+}
+
+.download-resume .box {
+    background-color: #007bff; /* Box background color */
+    color: #fff; /* Text color */
+}
+
+.download-resume .box:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+.download-resume .box a {
+    text-decoration: none;
+    color: #fff; /* Link color */
+}
+
+.download-resume .box a:hover {
+    text-decoration: underline; /* Hover effect */
+}
+
+.question {
+    margin-top: 40px; /* Top margin */
+}
+
+.question h2 {
+    font-size: 28px; /* Title font size */
+    color: #333; /* Title color */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+.question .btn {
+    font-size: 18px; /* Button font size */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 12px 24px; /* Button padding */
+    border-radius: 6px; /* Button border radius */
+    transition: background-color 0.3s ease; /* Button transition */
+}
+
+.question .btn:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+.social-list {
+    margin-top: 40px; /* Top margin */
+}
+
+.social-list .list-unstyled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-list .list-unstyled .ftco-animate {
+    margin-right: 15px; /* Right margin */
+}
+
+.social-list .list-unstyled .normal-txt {
+    margin-right: 8px; /* Right margin */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+}
+
+.social-list .list-unstyled a {
+    text-decoration: none;
+    color: #007bff; /* Link color */
+}
+
+.social-list .list-unstyled a:hover {
+    text-decoration: underline; /* Hover effect */
+}

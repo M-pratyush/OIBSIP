@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Landing Page</title>
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PK<span>Travels</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="home" class="hero">
+            <h1><span>Discover </span>Comfort and Convenience.</h1>
+            <p>Discover amazing places at exclusive deals</p>
+            <a href="#destinations" class="btn">Explore Now</a>
+        </section>
+    </header>
+
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-grid">
+            <div class="destination">
+                <img src="./images/paris.jpg" alt="Paris, France">
+                <h3>Paris, France</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/tokyo.jpg" alt="Tokyo, Japan">
+                <h3>Tokyo, Japan</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/thiland.jpg" alt="Thailand, Chiang Mai">
+                <h3>Thailand, Chiang Mai</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/italy.jpg" alt="Italy">
+                <h3>Italy</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/Maldives.jpg" alt="Maldives">
+                <h3>Maldives</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/Swizerland.jpg" alt="Switzerland">
+                <h3>Switzerland</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/china 2.jpg" alt="China, Chengdu">
+                <h3>China, Chengdu</h3>
+            </div>
+            <div class="destination">
+                <img src="./images/Kenya.jpg" alt="Kenya">
+                <h3>Kenya</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service">
+                <h3>Travel Planning</h3>
+                <p>Personalized travel itineraries to suit your preferences.</p>
+                <div class="featured-destinations">
+                    <div class="destination">
+                        <img src="./images/destination.jpg" alt="Destination Image">
+                        <h4>Destination Name</h4>
+                        <p>Description of the destination.</p>
+                        <button onclick="window.location.href = '#destinations'">Explore</button>
+                    </div>
+                    <!-- Add more destinations as needed -->
+                </div>
+                <form class="trip-planner-form" action="plan_trip_action" method="POST">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Enter destination">
+                    <label for="preferences">Preferences:</label>
+                    <textarea id="preferences" name="preferences" placeholder="Enter your preferences"></textarea>
+                    <button type="submit">Plan My Trip</button>
+                </form>
+            </div>
+
+            <div class="service">
+                <h3>Accommodation Booking</h3>
+                <p>Find the best places to stay at your destination.</p>
+                <div class="featured-listings">
+                    <div class="listing">
+                        <img src="./images/hotel2.jpg" alt="Hotel in BLR, India">
+                        <h4>Hotel Name</h4>
+                        <p>Location: BLR, India</p>
+                        <p>Price: 8000&#8377;/night</p>
+                        <button onclick="window.location.href = 'https://www.itchotels.com/in/en/itcgardenia-bengaluru'">Book Now</button>
+                    </div>
+                    <!-- Add more listings as needed -->
+                </div>
+                <form class="search-form" action="search_action" method="GET">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Enter destination">
+                    <label for="check-in">Check-in:</label>
+                    <input type="date" id="check-in" name="check-in">
+                    <label for="check-out">Check-out:</label>
+                    <input type="date" id="check-out" name="check-out">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="service">
+                <h3>Flight Deals</h3>
+                <p>Exclusive offers on flights to your favorite locations!</p>
+                <p>Book now and save on your next adventure.</p>
+                <div class="deal-card">
+                    <img src="./images/flight dela.jpg" alt="Flight Deal">
+                    <h3>Destination: City, Country</h3>
+                    <p>Price: 80000&#8377;</p>
+                    <p>Departure Date: MM/DD/YYYY</p>
+                    <button onclick="window.location.href = 'https://www.goindigo.in/?utm_source=Google_Cpc&utm_medium=Google_search&utm_campaign=Summer_Sale_29May/?cid=Search|P|SummerSale|29May&s_kwcid=AL!12293!3!700912620161!b!!g!!indigo&gad_source=1&gclid=EAIaIQobChMIhKvjk_y1hgMVhhF7Bx2SBwE9EAAYASAAEgIYSfD_BwE'">Book Now</button>
+                </div>
+                <div id="deal-countdown">
+                    <p>Hurry! This deal ends in:</p>
+                    <div id="countdown"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2>Travel Experience</h2>
+        <div class="experience-grid">
+            <div class="experience-item">
+                <img src="./images/Eiffel Tower1.jpg" alt="Experience Image 1">
+                <div class="experience-content">
+                    <h3>Exploring the Eiffel Tower</h3>
+                    <p>Vinod shares his thrilling adventure I would recommend this to anyone looking to see the Tower without all of the hassle you would expect with something so famous.</p>
+                    <blockquote>"The Eiffel Tower is a great experience and these folks handled the tours promptly and efficiently."</blockquote>
+                    <p class="read-more"><a href="#">Read more</a></p>
+                </div>
+            </div>
+            <div class="experience-item">
+                <img src="./images/Tokyo Nightlife.jpg" alt="Experience Image 2">
+                <div class="experience-content">
+                    <h3>Tokyo Nightlife</h3>
+                    <p>Puspa Raj describes the vibrant nightlife of Tokyo, with its neon lights, bustling streets, and unforgettable culinary delights.</p>
+                    <blockquote>"Tokyo's nightlife is like no other. The energy, the lights, and the food make it a night to remember."</blockquote>
+                    <p class="read-more"><a href="#">Read more</a></p>
+                </div>
+            </div>
+            <div class="experience-item">
+                <img src="./images/Safari in Kenya.jpg" alt="Experience Image 3">
+                <div class="experience-content">
+                    <h3>Safari in Kenya</h3>
+                    <p>Babu Rao recounts his thrilling safari experience in Kenya, witnessing the majestic wildlife and stunning landscapes of the savannah.</p>
+                    <blockquote>"Seeing the Big Five in their natural habitat was an unforgettable experience. The landscapes were just as impressive."</blockquote>
+                    <p class="read-more"><a href="#">Read more</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>    
+    
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="tel">Phone No</label>
+            <input type="tel" id="tel" name="tel" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo" style="color: darkblue;">Travel<span>Us</span></div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100024431821166" class="fa-brands fa-facebook"></a>
+                        <a href="https://www.linkedin.com/in/pratyush-kumar-972823291/" class="fa-brands fa-linkedin"></a>
+                        <a href="https://github.com/M-pratyush/UI-Task" class="fa-brands fa-github"></a>
+                        <a href="https://www.instagram.com/k_pratyush__/" class="fa-brands fa-square-instagram"></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TravelUs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
